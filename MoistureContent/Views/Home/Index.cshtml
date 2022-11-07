@@ -1,0 +1,345 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+
+    <div class="p-2">
+        <!-- NOTE: ASTM D2216 - 2017 -->
+        <div class="card mb-2">
+            <div class="card-header">
+                <div class="d-flex justify-content-between">
+                    <div class="h6"> EST-W000001S1</div>
+                    <div class="h6"> ASTM D2216 - 2017</div>
+                    <div class="d-flex h6">
+                        <div>Changes Saved</div>
+                        <i class="fa-solid fa-rotate-right d-flex align-items-center pl-1"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="h6 text-center mb-1">
+                    Water (Moisture) Content of Soil and Rock by Mass
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Project
+                            </div>
+                            <label id = "ProjectName">
+                            </label>
+                        </div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Sampled
+                            </div>
+                            <div id = "SampledDate">
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Source and Material
+                            </div>
+                            <div>
+                               Source name here - Material description here
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Specification
+                            </div>
+                            <div>
+                                Specification name here
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h6 font-weight-bold">Preparation</div>
+        <div class="card mb-2">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Method
+                            </div>
+                            <div id = "MethodTypeRadio">
+                                <div><input type="radio" name = "radioMethod" id="radioA" value="A"/>
+                                <label for="radioA">A</label><br></div>
+                                <div><input type="radio" name = "radioMethod" id="radioB" value="B" checked/>
+                                <label for="radioB">B</label></div>
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Drying Temperature (deg C):
+                            </div>
+                            <div>
+                                <input type="text" id="dryingTemp" value = "110"><br>
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <div class="d-flex justify-content-between">
+                                <div class="font-weight-bold">
+                                    Balance:
+                                </div>
+                                <i class="fa-solid fa-circle-info" data-toggle="tooltip" title="Hooray!"></i>
+                            </div>
+                            <div class="d-flex">
+                                <select class="selectStyle" name="balance" id="balance">
+                                    <option value="0">01Bal</option>
+                                    <option value="1">02Bal</option>
+                                    <option value="2">03Bal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Visual Nominal Particle Size:
+                            </div>
+                            <div>
+                                <select class="selectStyle" id="ParticleSizeDropdown">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                               <input type="checkbox" id="checkboxMaterialExcluded">
+                                <label for="materialExcluded"> Material Excluded</label><br>
+                            </div>
+                            <div>
+                                <input type="text" id="textMaterialExcluded" disabled ><br>
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <div class="d-flex justify-content-between">
+                                <div class="font-weight-bold">
+                                    Oven:
+                                </div>
+                                <i class="fa-solid fa-circle-info" data-toggle="tooltip" title="Hooray!"></i>
+                            </div>
+                            <div class="d-flex">
+                                <select class="selectStyle" name="oven" id="oven">
+                                    <option value="0">01OVN</option>
+                                    <option value="1">02OVN</option>
+                                    <option value="2">03OVN</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h6 font-weight-bold">Measurements</div>
+        <div class="card mb-2">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Tare ID:
+                            </div>
+                            <div>
+                                <input id = "InputTareID" placeholder="Tare ID" />
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Tare and Material Wet Mass (g):
+                            </div>
+                            <div>
+                                <input id = "InputTareMaterial" placeholder="Tare and Material Wet Mass" />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Tare Mass (g):
+                            </div>
+                            <div>
+                                <input id = "InputTareMass" placeholder="Tare Mass" />
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Material Wet Mass (g):
+                            </div>
+                            <div id = "MaterialWetMass">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Tested By
+                            </div>
+                            <div id = "TestedBy">
+                                Laboratory Supervisor Name
+                            </div><br>
+                            <button type="button" id = "btnClearAll" class="btn btn-primary btn-sm">Clear</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Date Tested
+                            </div>
+                            <div id = "DateTested">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h6 font-weight-bold">Dry Mass</div>
+        <div class="card mb-2">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="mb-1">
+                            <div class="d-flex justify-content-between">
+                                <div class="font-weight-bold">
+                                    Balance:
+                                </div>
+                                <i class="fa-solid fa-circle-info" data-toggle="tooltip" title="Hooray!"></i>
+                            </div>
+
+                            <div class="d-flex">
+                                <select class="selectStyle" name="dryBalance" id="dryBalance">
+                                    <option value="0">01Bal</option>
+                                    <option value="1">02Bal</option>
+                                    <option value="2">03Bal</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Tare and Material Dry Mass(g):
+                            </div>
+                            <div>
+                                <input id = "txtTotalDryMass" placeholder="Tare and Material Dry Mass" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-1">
+                        <div class="font-weight-bold">
+                            Material Dry Mass (g):
+                        </div>
+                        <div id = "MatDryMass">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h6 font-weight-bold">Results</div>
+        <div class="card mb-2">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Water Content (%):
+                            </div>
+                            <div id = "waterContent">
+                               
+                            </div>
+                            <div>
+                                <div class="font-weight-bold">
+                                    Report:
+                                </div>
+                                <div>
+                                    <input type="checkbox" id = "InsuffSampleMass"/>
+                                    Insufficient Sample Mass
+                                </div>
+                                <div>
+                                    <input type="checkbox" id = "DryingTemp" />
+                                    Drying Temperature
+                                </div>
+                                <div>
+                                    <input type="checkbox" id = "MatExcluded"/>
+                                    Material Excluded
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="mb-1">
+                            <div class="font-weight-bold">
+                                Remarks:
+                            </div>
+                            <div>
+                                <textarea name="comment" rows="12" cols="100">Type result here...</textarea><br>
+                            </div>
+                            <div>
+                                <div class="font-weight-bold">
+                                    Review:
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="mb-1">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <div class="mb-1">
+                                        <div class="font-weight-bold">
+                                            Checked By:
+                                        </div>
+                                        <div id="checkedBy">
+                                        </div>
+                                         <button id = "btnClearSecond" type="button" class="btn btn-primary btn-sm">Clear</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mb-1">
+                                        <div class="font-weight-bold">
+                                            Date Checked:
+                                        </div>
+                                        <div id="checkedDate">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+   
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+ </div>

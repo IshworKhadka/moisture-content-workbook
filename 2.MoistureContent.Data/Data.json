@@ -1,0 +1,34 @@
+//This json will be used for storing data objects
+
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "projectName": null,
+  "sampledDate": null,
+  "sourceAndMaterial": null,
+  "specification": null,
+  "preparationmodels": {
+    "method_Type": 0,
+    "temperature": 0.0,
+    "balance": null,
+    "particle_Size": 0,
+    "isMaterialExcluded": false,
+    "materials": null,
+    "oven": null
+  },
+  "measurementModels": {
+    "tareID": null,
+    "tareMass": 0.0,
+    "tareAndMaterialWetMass": 0.0,
+    "materialWetMass": 0.0
+  },
+  "dryMassModels": {
+    "dryMassBalance": null,
+    "tareAndMaterialDryMass": 0.0,
+    "materialDryMass": 0.0
+  },
+  "testedBy": null,
+  "testedDate": null,
+  "checkedBy": null,
+  "dateChecked": null
+}
+
